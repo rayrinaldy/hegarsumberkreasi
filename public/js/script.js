@@ -26,4 +26,12 @@ $(function() {
         slidesToShow: 3,
         slidesToScroll: 3,
     });
+
+    $('.scope-slider').slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+    });
 });

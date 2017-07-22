@@ -27,7 +27,7 @@ module.exports = function(passport){
     router.get('/about', frontRoutes.about);
     router.get('/products', frontRoutes.products);
     router.get('/careers', frontRoutes.careers);
-    router.get('/contacts', frontRoutes.contacts);
+    router.get('/contact', frontRoutes.contacts);
 
     // •••••••••••••••••••••//
     //        BACKEND

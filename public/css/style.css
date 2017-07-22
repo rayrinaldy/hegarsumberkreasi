@@ -11,7 +11,6 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto; }
 
 a {
@@ -20,10 +19,9 @@ a {
 
 .navbar-default {
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   background-color: #000;
-  border-bottom: 4px solid #db0011; }
+  border-bottom: 0; }
   .navbar-default .navbar-brand .brand-title {
     margin-left: 80px;
     color: #fff;
@@ -41,7 +39,7 @@ a {
     font-size: 1.3em;
     border-top: 2px solid #db0011; }
     .navbar-default .navbar-nav li > a:hover {
-      color: #444; }
+      color: #db0011; }
     @media (min-width: 768px) {
       .navbar-default .navbar-nav li > a {
         border-left: 2px solid #db0011;
@@ -51,13 +49,15 @@ a {
   .navbar-default .navbar-nav > .active > a {
     background-color: transparent;
     color: #fff; }
-    .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    .navbar-default .navbar-nav > .active > a:hover {
       background-color: transparent;
-      color: #555; }
+      color: #db0011; }
+    .navbar-default .navbar-nav > .active > a:focus {
+      color: #db0011;
+      font-weight: 500; }
 
 @media (min-width: 768px) {
   .navbar-default {
-    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     -webkit-transition: all .35s;
@@ -99,7 +99,7 @@ a {
   #partnership .slick-dots {
     bottom: -35px; }
     #partnership .slick-dots li button:before {
-      font-size: 35px; }
+      font-size: 15px; }
 
 #footer {
   background-color: #000;
@@ -118,6 +118,8 @@ a {
   min-height: 400px;
   max-height: 550px;
   min-width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: #eee; }
   .header.not-home {
     height: auto;
@@ -292,7 +294,8 @@ a {
 .project-wrapper .project-title {
   font-weight: bold;
   padding-top: 10px;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  text-transform: uppercase; }
 
 .project-wrapper .project-detail {
   padding-bottom: 10px; }
@@ -301,29 +304,66 @@ a {
   .project-wrapper .project-button {
     padding-bottom: 20px; } }
 
-.facilities-section .facilities-section-title {
-  font-size: 1.5em;
-  padding-bottom: 20px;
-  font-weight: 500; }
+.about-wrapper {
+  padding-top: 20px; }
 
-.facilities-section .facilities-icon {
-  display: inline-block;
-  max-width: 100px;
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  background-color: #ededed !important;
-  background-size: 65% !important;
-  margin-bottom: 3px; }
-  .facilities-section .facilities-icon.workshop {
-    background: url("../images/workshop.png") center no-repeat; }
-  .facilities-section .facilities-icon.crane {
-    background: url("../images/crane.png") center no-repeat; }
-  .facilities-section .facilities-icon.machine {
-    background: url("../images/machine.png") center no-repeat; }
-  .facilities-section .facilities-icon.worker {
-    background: url("../images/workers.png") center no-repeat; }
+.facilities-section {
+  padding-bottom: 40px; }
+  .facilities-section .facilities-section-title {
+    padding-bottom: 20px; }
+  .facilities-section .facilities-icon {
+    display: inline-block;
+    max-width: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #ededed !important;
+    background-size: 65% !important;
+    margin-bottom: 3px; }
+    .facilities-section .facilities-icon.workshop {
+      background: url("../images/workshop.png") center no-repeat; }
+    .facilities-section .facilities-icon.crane {
+      background: url("../images/crane.png") center no-repeat; }
+    .facilities-section .facilities-icon.machine {
+      background: url("../images/machine.png") center no-repeat; }
+    .facilities-section .facilities-icon.worker {
+      background: url("../images/workers.png") center no-repeat; }
+  @media (max-width: 767px) {
+    .facilities-section .facilities-name {
+      padding-bottom: 30px; } }
 
-@media (max-width: 767px) {
-  .facilities-section .facilities-name {
-    padding-bottom: 30px; } }
+.scope-of-works {
+  background: #db0011;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #db0011 0%, #6d0019 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #db0011 0%, #6d0019 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #db0011 0%, #6d0019 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db0011', endColorstr='#6d0019',GradientType=1 );
+  /* IE6-9 */
+  padding: 30px 0; }
+  .scope-of-works .scope-title {
+    font-size: 1.9em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300; }
+
+.scope-slider .scope {
+  outline: none;
+  position: relative; }
+  .scope-slider .scope .bg-color {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 510px;
+    height: 383px; }
+  .scope-slider .scope .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center; }

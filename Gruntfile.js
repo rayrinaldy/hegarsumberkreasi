@@ -35,8 +35,9 @@ module.exports = function(grunt) {
             build: {
                 files: {
                     'public/js/script.min.js': [
-                        'public/js/script.js', 
+                        'public/js/lib/slick.min.js', 
                         'public/js/bootstrap.min.js', 
+                        'public/js/script.js', 
                     ]
                 }
             }
@@ -45,7 +46,9 @@ module.exports = function(grunt) {
             build: {
                 files: {
                     'public/css/style.min.css': [
-                        'public/css/jInvertScroll.css', 
+                        'public/css/slick.css', 
+                        'public/css/slick-theme.css', 
+                        'public/css/font-awesome.css', 
                         'public/css/bootstrap.css', 
                         'public/css/style.css'
                     ]

@@ -15,10 +15,11 @@
 
 .navbar-default{
     width: 100%;
-    max-width: 1400px;
+    // max-width: 1400px;
     margin: 0 auto;
     background-color: #000;
-    border-bottom: 4px solid #db0011;
+    // border-bottom: 4px solid #db0011;
+    border-bottom: 0;
     .navbar-brand{
         
         .brand-title{
@@ -42,7 +43,7 @@
             color: #ededed;
             font-size: 1.3em;
             &:hover{
-                color: #444;
+                color: #db0011;
             }
             border-top: 2px solid #db0011;
             @include bp(min-sm){
@@ -59,17 +60,21 @@
             // border: 2px solid #db0011;
             // border-radius: 10px;
             color: #fff;
-            &:hover, &:focus {
+            &:hover {
                 background-color: transparent;
-                color: #555;
-              }
+                color: #db0011;
+            }
+            &:focus{
+              color: #db0011;
+              font-weight: 500;
+            }
         }
     }
 }
 
 @include bp(min-sm) {
   .navbar-default {
-    max-width: 1400px;
+    // max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     -webkit-transition: all .35s;
@@ -127,7 +132,7 @@
     .slick-dots {
         bottom: -35px;
         li button:before {
-            font-size: 35px;
+            font-size: 15px;
         }
     }
 }
@@ -156,6 +161,8 @@
   min-height: 400px;
   max-height: 550px;
   min-width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: #eee;
   &.not-home{
     height: auto;
@@ -379,6 +386,7 @@
         font-weight: bold;
         padding-top: 10px;
         font-size: 1.3em;
+        text-transform: uppercase;
     }
     .project-detail{
         padding-bottom: 10px;
@@ -396,11 +404,14 @@
 // 
 // ••••••••••••••••••••••••••••••••//
 
+.about-wrapper{
+  padding-top: 20px;
+}
+
 .facilities-section{
+  padding-bottom: 40px;
   .facilities-section-title{
-    font-size: 1.5em;
     padding-bottom: 20px;
-    font-weight: 500;
   }
   .facilities-icon{
     display: inline-block;
@@ -429,6 +440,45 @@
   .facilities-name{
     @include bp(max-sm){
       padding-bottom: 30px;
+    }
+  }
+}
+
+.scope-of-works{
+  background: #db0011; /* Old browsers */
+  background: -moz-linear-gradient(left, #db0011 0%, #6d0019 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #db0011 0%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #db0011 0%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db0011', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 */
+  padding: 30px 0;
+  .scope-title{
+    font-size: 1.9em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}
+
+.scope-slider{
+  .scope{
+    outline: none;
+    position: relative;
+    .bg-color{
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 510px;
+      height: 383px;
+      // border: 1px solid #fff;
+    }
+    .title{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 1.5em;
+      text-align: center;
     }
   }
 }
