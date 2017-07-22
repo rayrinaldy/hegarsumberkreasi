@@ -15,7 +15,8 @@ var path         = require('path'),
 
 	upload       = multer(),
 	app          = express(),
-	port         = process.env.PORT || 3000;
+	// port         = process.env.PORT || 3001;
+	port         = 3001;
 
 // ============= EXPRESS VIEW CONFIG =================
 app.set('view engine', 'pug');
