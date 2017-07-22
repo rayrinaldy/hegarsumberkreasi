@@ -13,7 +13,7 @@ html
 		//- Schema.org markup for Google+
 		meta(itemprop='name', content!=title)
 		meta(itemprop='description', content!=description)
-		meta(itemprop='image', content='https://rayrinaldy.github.io/ray-website/images/1.jpg')
+		meta(itemprop='image', content='images/logo.png')
 
 		//- Twitter Card data
 		meta(name='twitter:card', content='summary_large_image')
@@ -23,13 +23,13 @@ html
 		meta(name='twitter:creator', content='@ray_r9')
 
 		//- Twitter summary card with large image must be at least 280x150px
-		meta(name='twitter:image:src', content='https://rayrinaldy.github.io/ray-website/images/1.jpg')
+		meta(name='twitter:image:src', content='images/logo.png')
 
 		//- Open Graph data
 		meta(property='og:title', content!=title)
 		meta(property='og:type', content='article')
 		meta(property='og:url', content='http://www.rayrinaldy.com/')
-		meta(property='og:image', content='https://rayrinaldy.github.io/ray-website/images/1.jpg')
+		meta(property='og:image', content='images/logo.png')
 		meta(property='og:description', content!=description)
 		meta(property='og:site_name', content!=description)
 		meta(property='article:published_time', content='2017-01-04T05:59:00+08:00')
@@ -60,48 +60,6 @@ html
 		block css
 
 	body
-		//- nav.navbar.navbar-fixed-top
-			.container-fluid
-				.navbar-header
-					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
-						span.icon-bar
-						span.icon-bar
-						span.icon-bar
-					a.navbar-brand(href='/')
-						img(src="images/logo.png", alt="Hegar Sumber Kreasi")
-
-				#myNavbar.collapse.navbar-collapse
-					ul.nav.navbar-nav
-						li.active
-							a(href='/') Home
-						li
-							a(href='/about') About Us
-						li.dropdown
-							a.dropdown-toggle(data-toggle='dropdown', href='#')
-								| Products 
-								span.caret
-							ul.dropdown-menu
-								li
-									a(href='#') Page 1-1
-								li
-									a(href='#') Page 1-2
-								li
-									a(href='#') Page 1-3
-
-						li
-							a(href='/careers') Careers
-						li
-							a(href='#') Contact Us
-					//- ul.nav.navbar-nav.navbar-right
-						li
-							a#signup(href='#')
-								span.glyphicon.glyphicon-user
-								|  Sign Up
-						li
-							a#login(href='#')
-								span.glyphicon.glyphicon-log-in
-								|  Login
-
 		nav#mainNav.navbar.navbar-default.navbar-fixed-top
 			.container-fluid
 				//- Brand and toggle get grouped for better mobile display
@@ -159,12 +117,13 @@ html
 						.col-md-10.col-md-offset-1
 							.footer-text Copyright© Hegar Sumber Kreasi 2017. All Rights Reserved.
 			
-		script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
-		script(src="js/bootstrap.min.js")
+		
 
 		if config.deploy
 			script(src="js/script.min.js")
 		else
+			script(src="js/jquery.js")
+			script(src="js/bootstrap.min.js")
 			block scripts
 
 

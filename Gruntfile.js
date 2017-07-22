@@ -36,6 +36,7 @@ module.exports = function(grunt) {
                 files: {
                     'public/js/script.min.js': [
                         'public/js/lib/slick.min.js', 
+                        'public/js/jquery.js', 
                         'public/js/bootstrap.min.js', 
                         'public/js/script.js', 
                     ]
