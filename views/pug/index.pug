@@ -1,0 +1,94 @@
+extends layout
+
+block var
+	//- Meta tags property
+	- var title = "Hegar Sumber Kreasi"
+	- var description = "We are an Indonesian company started in 1990 based in Bandung and we cover all areas of the Indonesia with a wide customer base. Our staff have experience to provide steel services to the Construction Industry"
+	- var author = 'Ray Rinaldy'
+	- var keywords = 'indonesia, company, indonesia, company'
+
+block css
+	link(rel="stylesheet", href="css/slick.css")
+	link(rel="stylesheet", href="css/slick-theme.css")
+
+block scripts
+	script(src="js/lib/slick.min.js")
+	script(src="js/script.js")
+
+block content
+	.header
+		.info
+			.meta: img.img-responsive(src="images/logo-big.png", alt="")
+				//- a.author(href='https://twitter.com/nodws', target='_b')
+				
+			h1 HEGAR SUMBER KREASI
+			h4 Impossible is Nothing, Respond is Everything
+	section.content
+		h2.about-us About Us
+		p.pd
+			| We are an Indonesian company started in 1990 based in Bandung and we cover all areas of the Indonesia with a wide customer base. <br>Our staff have experience to  provide steel services to the Construction Industry
+
+		//- a.about-btn(href="") VIEW MORE
+			span.outline-placeholder
+
+		//- hr
+
+		h2.latest-project Latest Project
+		p.pd
+			| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl turpis, porttitor et finibus id, viverra a metus. Praesent non ante sed orci posuere varius quis sit amet dui. Cras molestie magna orci, id gravida dolor molestie in. Duis sollicitudin turpis quis tortor egestas, ut ultrices nisl elementum. Vestibulum sed ipsum eget nulla laoreet cursus in ac sem. Integer a suscipit justo, quis aliquam sapien. Maecenas et tellus nibh. Vivamus tincidunt eros id commodo pellentesque.
+
+
+		.project-row
+			.row
+				.col-sm-6.col-md-4
+					.project-wrapper
+						.project-img: img.img-responsive(src="http://via.placeholder.com/500x250", alt="")
+						.project-title Lorem Ipsum
+						.project-detail 
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl turpis, porttitor et finibus id, viverra a metus. Praesent non ante sed orci posuere varius quis sit amet dui. Cras molestie magna orci, id gravida dolor molestie in.
+						.project-button: a(href="#" target="_blank") Read more..
+
+				.col-sm-6.col-md-4
+					.project-wrapper
+						.project-img: img.img-responsive(src="http://via.placeholder.com/500x250", alt="")
+						.project-title Lorem Ipsum
+						.project-detail 
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl turpis, porttitor et finibus id, viverra a metus. Praesent non ante sed orci posuere varius quis sit amet dui. Cras molestie magna orci, id gravida dolor molestie in.
+						.project-button: a(href="#" target="_blank") Read more..
+
+				.col-sm-6.col-md-4
+					.project-wrapper
+						.project-img: img.img-responsive(src="http://via.placeholder.com/500x250", alt="")
+						.project-title Lorem Ipsum
+						.project-detail 
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl turpis, porttitor et finibus id, viverra a metus. Praesent non ante sed orci posuere varius quis sit amet dui. Cras molestie magna orci, id gravida dolor molestie in.
+						.project-button: a(href="#" target="_blank") Read more..
+
+
+	//- #main-content
+	//- 	.container-fluid
+	//- 		.row
+	//- 			.col-xs-12
+	//- 				.error-message
+	//- 					if message.length > 0
+	//- 						.alert.alert-danger.alert-dismissable
+	//- 							a.close(href='#', data-dismiss='alert', aria-label='close') ×
+	//- 							| #{message} You should <a href="/login" class="alert-link">login</a> first!
+
+	//- 		.row
+	//- 			.col-md-10.col-md-offset-1
+	//- 				.header-section
+	//- 					.hero-header: img.img-responsive(src="images/logo-full.png", alt="")
+	//- 					h3.hero-title.text-center Experienced to provide the best steel services for the Construction Industry
+
+	//- #about-us
+	//- 	.container-fluid
+	//- 		.row
+	//- 			.col-md-10.col-md-offset-1
+	//- 				h1 About Us
+
+	//- #latest-project
+	//- 	.container-fluid
+	//- 		.row
+	//- 			.col-md-10.col-md-offset-1
+	//- 				h1 Latest Project

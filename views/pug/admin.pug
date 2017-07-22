@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	.container
+		.page-header.text-center
+			h1
+				span.fa.fa-anchor
+				|  Profile Page of #{user.firstName}
+			a.btn.btn-default.btn-sm(href='/logout') Logout
+		.row
+			// LOCAL INFORMATION
+			.col-sm-6
+				.well
+					h3
+						span.fa.fa-user
+						|  Local
+					p
+						strong id: #{user._id}
+						br
+						strong email: #{user.email}
+						br
+						strong password: #{user.password}
+
+			.col-sm-6
+				.well
+					form(action="/updateprofile")
+						.form-group
+							label(for="email") Email address
+							input#email.form-control(type="email")
+						button.btn.btn-default(type="submit") Submit
